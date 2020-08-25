@@ -1,5 +1,7 @@
 # BPNet on CentOS
 
+Find docker image here: https://hub.docker.com/repository/docker/angelopelonero/bpnet_centos8
+
 Dockerized [BPNet](https://www.biorxiv.org/content/10.1101/737981v2) for easy distribution. Docker user andrewsg built [BPNet on Debian Linux](https://hub.docker.com/r/andrewsg/bpnet), but I wanted to build our environment on CentOS for a few reasons:
 
 1. CentOS has a longer lifecycle schedule than Debian. This is good for stability and long-term use.
