@@ -11,7 +11,7 @@ Dockerized [BPNet](https://www.biorxiv.org/content/10.1101/737981v2) for easy di
 
 More README to come.
 
-## Docker Setup
+## Setup
 
 ### Docker
 
