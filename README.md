@@ -22,6 +22,7 @@ More README to come.
 4. Start the container - recommended to run this interactively via `bash`:
     - First time launch from image:
         - `docker run -u root -it --name BPNetCentOS -v /Users/:/host_system/ angelopelonero/bpnet_centos8 bash`
+        - NOTE: the `-v` flag mounts the shared folder as follows `-v /path/to/local/folder2share/:/whatever_you_want_the_dir_called_in_your_container/`
         - Exit container using `exit` when finished. Container will persist in Docker as you left it.
     - To re-launch container:
         - `docker exec -it BPNetCentOS bash`
