@@ -1,6 +1,6 @@
 # BPNet on CentOS
 
-Find docker image here: https://hub.docker.com/repository/docker/angelopelonero/bpnet_centos8
+Find docker image here: [https://hub.docker.com/r/angelopelonero/bpnet_centos8](https://hub.docker.com/r/angelopelonero/bpnet_centos8)
 
 Dockerized [BPNet](https://www.biorxiv.org/content/10.1101/737981v2) for easy distribution. Docker user andrewsg built [BPNet on Debian Linux](https://hub.docker.com/r/andrewsg/bpnet), but I wanted to build our environment on CentOS for a few reasons:
 
@@ -15,7 +15,21 @@ More README to come.
 
 ### Docker
 
-[coming soon]
+1. Download/install Docker
+2. Configure Docker resources + directory sharing
+    - FWIW I mount my local Users folder and run BPNet directly in the directory share
+3. Pull the Docker image
+4. Start the container - recommended to run this interactively via `bash`:
+    - First time launch from image:
+        - `docker run -u root -it --name BPNetCentOS -v /Users/:/host_system/ angelopelonero/bpnet_centos8 bash`
+        - Exit container using `exit` when finished. Container will persist in Docker as you left it.
+    - To re-launch container:
+        - `docker exec -it BPNetCentOS bash`
+5. Run BPNet
+
+##### A note on resource allocation:
+
+A good starting point is to allocate 50% of your system resources to BPNet and adjust from there. Be sure to start "fresh," ideally after a restart, and monitor your system's resource usage as you work.
 
 ### Docker to Singularity (for HPC)
 
