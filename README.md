@@ -20,11 +20,13 @@ More README to come.
     - FWIW I mount my local Users folder and run BPNet directly in the directory share
 3. Pull the Docker image
 4. Start the container - recommended to run this interactively via `bash`:
-    - First time launch from image:
+    - First time launch from image (run once):
         - `docker run -u root -it --name BPNetCentOS -v /Users/:/host_system/ angelopelonero/bpnet_centos8 bash`
         - NOTE: the `-v` flag mounts the shared folder as follows `-v /path/to/local/folder2share/:/whatever_you_want_the_dir_called_in_your_container/`
         - Exit container using `exit` when finished. Container will persist in Docker as you left it.
+        - Stop container using `docker stop BPNetCentOS`
     - To re-launch container:
+        - `docker start BPNetCentOS`
         - `docker exec -it BPNetCentOS bash`
 5. Run BPNet
 
